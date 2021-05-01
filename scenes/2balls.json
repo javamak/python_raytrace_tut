@@ -1,0 +1,65 @@
+{
+  "objects": [
+    {
+      "center": {
+        "x": 0,
+        "y": 10000.5,
+        "z": 1.0
+      },
+      "radius": 10000.0,
+      "chequered_material": {
+        "color1": "#420500",
+        "color2": "#E6B87D",
+        "ambient": 0.2,
+        "reflection": 0.2
+      }
+    },
+    {
+      "center": {
+        "x": 0.75,
+        "y": -0.1,
+        "z": 2.25
+      },
+      "radius": 0.6,
+      "material": {
+        "color": "#0000FF"
+      }
+    },
+    {
+      "center": {
+        "x": -0.75,
+        "y": -0.1,
+        "z": 1.0
+      },
+      "radius": 0.6,
+      "material": {
+        "color": "#803980"
+      }
+    }
+  ],
+  "lights": [
+    {
+      "position": {
+        "x": 1.5,
+        "y": -0.5,
+        "z": -10.0
+      },
+      "color": "#FFFFFF"
+    },
+    {
+      "position": {
+        "x": -0.5,
+        "y": -10.5,
+        "z": 0
+      },
+      "color": "#E6E6E6"
+    }
+  ],
+  "width": 1080,
+  "height": 920,
+  "camera": {
+    "x": 0,
+    "y": -0.35,
+    "z": -1
+  }
+}

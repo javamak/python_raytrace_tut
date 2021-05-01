@@ -1,0 +1,32 @@
+{
+  "objects": [
+    {
+      "center": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "radius": 0.5,
+      "material": {
+        "color": "#FF0000"
+      }
+    }
+  ],
+  "lights": [
+    {
+      "position": {
+        "x": 1.5,
+        "y": -0.5,
+        "z": -10.0
+      },
+      "color": "#FFFFFF"
+    }
+  ],
+  "width": 320,
+  "height": 200,
+  "camera": {
+    "x": 0,
+    "y": 0,
+    "z": -1
+  }
+}
