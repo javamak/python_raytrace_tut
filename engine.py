@@ -77,8 +77,8 @@ class RenderEngine:
             #diffuse shading (Lambert)
             color += obj_color * material.diffuse * max(normal.dot_product(to_light.direction), 0)
 
-        #specualar shadding (Blinn-Phong)
-        half_vector = (to_light.direction + to_cam).normalize()
-        color += light.color * material.specular * max(normal.dot_product(half_vector), 0) ** specular_k
+            #specualar shadding (Blinn-Phong)
+            half_vector = (to_light.direction + to_cam).normalize()
+            color += light.color * material.specular * max(normal.dot_product(half_vector), 0) ** specular_k
 
         return color

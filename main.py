@@ -1,16 +1,8 @@
 #!/usr/bin/evn python
 
-
-from image import Image
-from color import Color
-from vector import Vector
-from point import Point
-from sphere import Sphere
-from scene import Scene
 from engine import RenderEngine
-from light import Light
-from material import Material
 from scene_loader import load_scene
+import time
 
 def main():
 
@@ -22,6 +14,7 @@ def main():
               Light(Point(-0.5, -10.5, 0.0), Color.from_hex('E6E6E6'))]
     scene = Scene(camera, objects, lights, 320, 200)"""
 
+    start_time = time.time()
     scene = load_scene('./scenes/2balls.json')
     engine = RenderEngine()
     image = engine.render(scene)
@@ -29,6 +22,7 @@ def main():
     with open("2balls.ppm", "w") as img_file:
         image.write_ppm(img_file)
 
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__ == "__main__":
     main()
