@@ -6,5 +6,3 @@ def load_scene(file_name):
         data = json.load(f)
 
     return Scene(data)
-
-print(load_scene('./scenes/default.json'))
