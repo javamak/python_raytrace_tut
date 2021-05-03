@@ -81,15 +81,15 @@ class RenderEngine:
         obj_color = material.color_at(hit_pos)
         to_cam = scene.camera - hit_pos
         specular_k = 50
-        color = material.ambient * Color.from_hex(("#FFFFFF"))
+        color = material.ambient * Color.from_hex(("#000000"))
         for light in scene.lights:
             to_light = Ray(hit_pos, light.position - hit_pos)
             # diffuse shading (Lambert)
             color += obj_color * material.diffuse * max(normal.dot_product(to_light.direction), 0)
 
-        # specualar shadding (Blinn-Phong)
-        half_vector = (to_light.direction + to_cam).normalize()
-        color += light.color * material.specular * max(normal.dot_product(half_vector), 0) ** specular_k
+            # specualar shadding (Blinn-Phong)
+            half_vector = (to_light.direction + to_cam).normalize()
+            color += light.color * material.specular * max(normal.dot_product(half_vector), 0) ** specular_k
 
         return color
 
